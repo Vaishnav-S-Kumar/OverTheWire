@@ -7,8 +7,8 @@ The best resource to learn about each tool is the man command which provides the
 
 Each level of bandit is connected by the command 
 ```
-banditx@bandit.labs.overthewire.org -p 2220 
+banditX@bandit.labs.overthewire.org -p 2220 
 ```
-where x stands for the level number (currently 0-34)
+where X stands for the level number (currently 0-34)
 
 The first level can be accessed by the password bandit0
