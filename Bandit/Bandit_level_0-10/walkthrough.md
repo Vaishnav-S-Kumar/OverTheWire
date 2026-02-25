@@ -1,6 +1,6 @@
 # Walkthrough for level 0 to 10
 
-method to connect: ssh banditX@bandit.labs.overthewire.org -p 2220
+method to Access each level: ssh banditX@bandit.labs.overthewire.org -p 2220
 
 X stands for level number
 
