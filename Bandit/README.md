@@ -12,3 +12,5 @@ banditX@bandit.labs.overthewire.org -p 2220
 where X stands for the level number (currently 0-34)
 
 The first level can be accessed by the password bandit0
+
+<img src="https://lh5.googleusercontent.com/WCkr01BMZn6qrzTPbjpcfESaCLK87sqoLyUoHLUaT__cdOA3ZLnynoGaYY1mvb9Nsq7rPQ-Rphwb3C6kXkms9J3Bth01et2mp2WNRcziGDU3Hf7ZtqaCAlNXIBvPrDYVlqqmp6Sxhk6JPKziQb7E92c" alt="Linux" />
