@@ -6,7 +6,9 @@ Bandit is an online platform aimed for absolute beginners for learning linux. Th
 The best resource to learn about each tool is the man command which provides the manual of a command. for example "man ls" provides the manual of ls command.
 
 Each level of bandit is connected by the command 
-```banditx@bandit.labs.overthewire.org -p 2220 
-where x stands for the level number (currently 0-34)
+```
+banditX@bandit.labs.overthewire.org -p 2220 
+```
+where X stands for the level number (currently 0-34)
 
 The first level can be accessed by the password bandit0
