@@ -52,7 +52,7 @@ scp -P <port-number> bandit13@bandit.labs.overthewire.org:/<file-path> <destinat
 ```
 - Second method would be to SSH login to the machine and manually copy the contents of the file and create a file on player machine and paste the content. <br>
 
-- In both case, use ```chmod``` command to change the permissions of the file so that ssh shall accept it when accessing the next level.* *make it only accessible by user**
+- In both case, use ```chmod``` command to change the permissions of the file so that ssh shall accept it when accessing the next level. **Make it only accessible by the user** 
 
 ### Explaination
 
