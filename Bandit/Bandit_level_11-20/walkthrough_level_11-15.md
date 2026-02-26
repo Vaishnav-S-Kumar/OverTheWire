@@ -52,7 +52,7 @@ scp -P <port-number> bandit13@bandit.labs.overthewire.org:/<file-path> <destinat
 ```
 - Second method would be to SSH login to the machine and manually copy the contents of the file and create a file on player machine and paste the content. <br>
 
-- In both case, use ```chmod``` command to change the permissions of the file so that ssh shall accept it when accessing the next level. *make it only accessible by user*
+- In both case, use ```chmod``` command to change the permissions of the file so that ssh shall accept it when accessing the next level.* *make it only accessible by user**
 
 ### Explaination
 
@@ -73,4 +73,16 @@ telnet <host> <port>
 - telnet is a network protocol with allows to connect to and communicate with remote computers over TCP/IP.
 - Here, the password is entered to the terminal using telnet. The service on that port verifies the password and returns the password of the next level.
 
+## Level 15
 
+- Password can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL/TLS encryption.
+- Use the command
+```
+openssl s_client -connect <host>:<port>
+```
+- Submit the password of the current level
+
+### Explaination
+
+- ```openssl``` is a toolkit which is used to implement SSL/TLS protocol for various pruposes such as creation of keys, establishing connection, etc. 
+- The above command is used to establish a connection to server [ <host>:<port> ] as a client using SSL/TLS encryption protocol
