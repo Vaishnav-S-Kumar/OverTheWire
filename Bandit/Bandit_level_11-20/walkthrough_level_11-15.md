@@ -1,4 +1,4 @@
-# Walkthrough for level 11 to 20
+# Walkthrough for level 11 to 15
 
 method to Access each level: ```ssh banditX@bandit.labs.overthewire.org -p 2220```
 
