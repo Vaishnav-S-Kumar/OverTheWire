@@ -86,3 +86,32 @@ ssh  <username>@ <host> -p <port> <command> <file-name.
 
 - Setuids are executables which runs the execution on behalf of owner, no matter who the user is. Alwasys understand how the setuids are executed and what is its format/methods included in the execution.
 
+## Level 20
+
+- Password will be shared after the setuid is executed with a port specified with it during execution.
+``` 
+./<file-name> <port.
+```
+- The executable file reads the first line of content present in the port and compares to the password of the current level and if it is correct it will share the password for the next level.
+- Basically a port should be setup to provide the password of the current level when the setuid is executed along with the port number.
+- To do the above we require two terminals within the same session, for that we use:
+```
+tmux
+```
+- It can be used for splitting the terminal into multiple terminals in the same tab. use the keys:
+```
+ctrl + shift + b, ctrl + shift + %
+
+```
+- Use ```ctrl + shift + b, arrow keys[left & right]``` to switch between the terminals
+- Use the first terminal to execute the command:
+```
+echo <password> | nc -lvnp <port>
+```
+- Use the second terminal to execute the setuid along with the port
+- The password would shared in the first terminal
+
+### Explaination
+
+- The first terminal is used setting up port which transmits the password 
+- By executing the setuid with the port, which we have setup. It fulfills the condition and returns the password of the next level
