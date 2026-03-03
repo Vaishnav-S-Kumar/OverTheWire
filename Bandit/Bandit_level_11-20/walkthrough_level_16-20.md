@@ -113,5 +113,5 @@ echo <password> | nc -lvnp <port>
 
 ### Explaination
 
-- The first terminal is used setting up port which transmits the password 
+- The first terminal is used for setting up a port which transmits the password 
 - By executing the setuid with the port, which we have setup. It fulfills the condition and returns the password of the next level
