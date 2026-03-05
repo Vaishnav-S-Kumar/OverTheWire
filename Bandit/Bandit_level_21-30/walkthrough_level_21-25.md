@@ -23,7 +23,7 @@ cat /etc/cron.d/<file-name>
 ```
 cat /etc/cron.d/<file-name>
 ```
-- The content of the executable mentioned in the /etc/cron.d/<file-name>
+- The content of the executable mentioned in the```/etc/cron.d/<file-name>```
 ```
 #!/bin/bash
 
