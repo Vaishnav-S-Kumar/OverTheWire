@@ -108,4 +108,14 @@ cat <file-name> | nc localhost 30002
 ### Explaination
 
 - The script created was to generate all 4 digit numbers and to store it in file [ Here it is mentioned as <file-name> ]
-- The ```cat``` command output is piped or taken as input for the ```nc``` command. Thus trying all the combination of 4 digit numbers along with the password
+- The ```cat``` command output is piped or taken as input for the ```nc``` command. Thus trying all the combination of 4 digit numbers along with the password.
+
+## Level 25
+
+- Log in to level 25 using SSH and use the ```ls``` command to list the files in the home directory.
+- The SSH key for the level 26 is present in the home directory.
+- First way, use ```cat``` and copy the key, then create a file in your machine and paste it.
+- Second way, use ```scp``` and tranfer the key to your machine
+```
+scp -P <port> <username>@<host>:<file-path> <destination file-path>
+```
