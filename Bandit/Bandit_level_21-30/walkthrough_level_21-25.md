@@ -81,4 +81,31 @@ cat /etc/bandit_pass/<file-name> > /temporary directory/<file-name>
 ### Explaination
 
 - The executable used in the cronjob reads the content of the directory /var/spool/<username>/foo and executes the files inside that directory. After execution the file is deleted.
-- So the logic here is to create a script which will be added to the directory mentioned above. The script will be used to reveal the password of the next level. 
+- So the logic here is to create a script which will be added to the directory mentioned above. The script will be used to reveal the password of the next level.
+
+ 
+## Level 24
+
+- Password is given after submitting the password of the current level along with a 4 digit number which is not mentioned anywhere to ```daemon``` listening the 30002 port.
+- First, try by using ```nc localhost 30002``` to see how the daemon takes the input
+- First start by creating a temporary directoy using ```mktemp -d``` and using it for all operations
+```
+cd $(mktemp -d)
+```
+- Create a script file and use the following script
+```
+#! /usr/bin/env bash
+for i in {0000..9999};do
+    echo <password> $i >> <file-name> 
+```
+- Execute file using ```bash <script-file>```
+- Use the following command for brute force
+```
+cat <file-name> | nc localhost 30002
+```
+- The script will end with the password for next level displayed
+
+### Explaination
+
+- The script created was to generate all 4 digit numbers and to store it in file [ Here it is mentioned as <file-name> ]
+- The ```cat``` command output is piped or taken as input for the ```nc``` command. Thus trying all the combination of 4 digit numbers along with the password
