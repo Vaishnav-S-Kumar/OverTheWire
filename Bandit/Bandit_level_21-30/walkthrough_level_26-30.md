@@ -50,3 +50,31 @@ git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/
 
 - Without using the port number, the repositery cannot be cloned and the result will be a error message- To use the port number, enter it at the end of the hostname as an extenstion instead of using a flag like ```-p``` or ```-P```
 
+## Level 28
+
+- Same as in the previous levels, Clone the git repositery mentioned in the description and use the same command format as in the previous level.
+- After cloning the database, use ```cd``` to change the directory and use ```cat``` to show the contents of the file
+```
+# Bandit Notes
+Some notes for level29 of bandit.
+
+## credentials
+
+- username: bandit29
+- password: xxxxxxxxxx
+
+```
+- As seen above the password is changed, to find the password use the command 
+```
+git log
+```
+- Copy the commit hash which shall give us the password or commit hash which is before the commit which changes the password. Use the command 
+```
+git checkout <commit-hash>
+```
+- Use the ```cat``` command to read the content of the file 
+
+### Explaination
+
+- The ```git log``` command gives the full history of the repositery and what all changes has been made.
+- The ```git checkout``` command reverts the changes back to the commit whose commit hash is used alongside this command.
