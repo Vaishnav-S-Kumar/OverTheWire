@@ -36,3 +36,17 @@ exit 0
 - By minimizing/reducing the size of the terminal the more command would not be executed completely
 - By pressing ```v``` key, it opens vim and allows user to manipulate the shell by pressing ```:``` and adding the above
 - The password was easily found after understanding how to execute the setuid 
+
+## Level 27
+
+- Password for the next level can be found in a git repositery at ssh://bandit27-git@bandit.labs.overthewire.org/home/bandit27-git/repo via the port 2220.
+- Instead of SSH into the Level, use your local machine and use the ```git clone``` command:
+```
+git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo
+```
+- Use ```cd``` to change directory to repo and use ```cat``` to print the contents of the file
+
+### Explaination
+
+- Without using the port number, the repositery cannot be cloned and the result will be a error message- To use the port number, enter it at the end of the hostname as an extenstion instead of using a flag like ```-p``` or ```-P```
+
