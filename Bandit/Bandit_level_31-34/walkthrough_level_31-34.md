@@ -46,3 +46,25 @@ git push -u origin <branch-name>
 - -f is used to forcefully upload the file to the index,
 - The commit message is let the user understand what has been changed or modified.
 - At last the push command, pushes the changes to repositery under the mentioned branch.
+
+## Level 32
+
+- There is no description to this level, So we can login to this level using SSH, After login we recieve this
+```
+WELCOME TO THE UPPERCASE SHELL
+```
+- Try running commands like ```pwd``` or ```ls```, you receieve permission denied error messages in the terminal.
+- use the command
+```
+$0
+```
+- A bash terminal is started, try using ```ls``` and see if it works
+- Use the command ```whoami``` to see which user you are
+- Since the result of the ```whoami``` command shows you are the user of the next level, use it to showthe password of the next level 
+- Change directory to home directory of the next user and use ```ls``` to see if there is any files
+- use ```cat``` to read the content of the file present in there.
+
+### Explaination
+
+- The variables used in linux consist of upper cases, using these variables alongside $ sign will enable/activate the variable value. Here, 0 is the variable for shell therefore a shell is spawned after typing ```$0```.
+
