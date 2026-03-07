@@ -80,7 +80,9 @@ git checkout <commit-hash>
 - The ```git checkout``` command reverts the changes back to the commit whose commit hash is used alongside this command.
 
 ## Level 29
+
 - Password is stored in a github repositery, Same as in the previous level. Clone the repositery mentioned in description using the technique used before.
+
 - After cloning, use ```cd <directory-name>``` and use ```cat <file-name>``` to show the contents of the file present in the directory. 
 ```
 # Bandit Notes
@@ -110,3 +112,25 @@ git switch <branch-name>
 - In git, There are several branches so multiple people could work on the same project, but working on the same project could cause conflict. 
 - Each individual or contributor is given a branch and these branches would have differences from one another but the intial content of the directory is same for all
 - Using ```git branch -a``` would list the number branches which the repository has and using the ```git checkout <branch-name>``` or ```git switch <branch-name>``` would switch the branch of the repositery which it is currently using.
+
+## Level 30
+
+- Password is stored in a github repositery, Same as in the previous level. Clone the repositery mentioned in description using the technique used before.
+- After cloning, use ```cd <directory-name>``` and use ```cat <file-name>``` to show the contents of the file present in the directory. 
+```
+just an epmty file... muahaha
+```
+- Check the git tag, to find if there is any information using the command
+```
+git tag
+```
+- After finding the tag use the command:
+```
+git show <tag-name>
+```
+
+### Explaination
+
+- Tags are like names for commit, it is similar to branch except that it always names the same commit and can have its own description
+
+
