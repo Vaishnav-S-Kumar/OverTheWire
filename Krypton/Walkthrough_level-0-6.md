@@ -18,4 +18,16 @@ echo <string> | base64 -d
 
 ## Level 1
 
+- Password for next level lies in a file called krypton2, it is encrypted using a simple rotation which is a standard ciphertext format.
+- From the description, we can assume it is using a ROT13 algorithm to convert the real password to ciphertext.
+- Use the ```find``` command to find the file location of krypton2:
+```
+find / -type f -name <file-name>
+``` 
+- Here ```-type f``` refers to the type of data ```f``` means file
+- Use the following command to decrypt the contain of the file afte finding the location of the file
+```
+cat <file-location> | tr <first-set> <second-set>
+```
+- The ```tr``` command translates/replace first set to second set.
 
