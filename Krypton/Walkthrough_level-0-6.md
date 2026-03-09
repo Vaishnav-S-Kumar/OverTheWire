@@ -43,11 +43,10 @@ cat <file-location> | tr <first-set> <second-set>
     ```
     cd $(mktemp -d)
     ```
-    2. Create a link to the keyfile which is stored in the directory where krypton3 is stored.
-    ```
+    2. Create a link to the keyfile which is stored in the directory where krypton3 is stored. So that binary could access the keyfile which is used for encrypting krypton3 
+     ```
     ln -s <file>
     ```
-    So that binary could access the keyfile which is used for encrypting krypton3 
     3. change the permissions of the file using ```chmod```
     ```
     chmod 777 .
