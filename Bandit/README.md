@@ -13,6 +13,6 @@ where X stands for the level number (currently 0-34)
 
 To complete each level, the player has to find the password using the description/instruction provided in the website about the level. This password.
 
-** level 0 can be accessed by the password bandit0**
+**Level 0 can be accessed by the password bandit0**
 
 <img src="https://lh5.googleusercontent.com/WCkr01BMZn6qrzTPbjpcfESaCLK87sqoLyUoHLUaT__cdOA3ZLnynoGaYY1mvb9Nsq7rPQ-Rphwb3C6kXkms9J3Bth01et2mp2WNRcziGDU3Hf7ZtqaCAlNXIBvPrDYVlqqmp6Sxhk6JPKziQb7E92c" alt="Linux" />
