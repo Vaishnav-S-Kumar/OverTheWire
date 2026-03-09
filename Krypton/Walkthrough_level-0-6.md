@@ -31,3 +31,33 @@ cat <file-location> | tr <first-set> <second-set>
 ```
 - The ```tr``` command translates/replace first set to second set.
 
+## Level 2
+
+- Password for the next level is in the file krypton3 which is encrypted using caesar cipher. One feature about ceasar cipher is the number of the characters to shift can vary.
+- It is also mentioned the characters changes the case, ie lowercase is converted to uppercase
+- There are additional information provided which describes how the file has been encrypted, ie
+    - A binary is available in the directory which is stored in the same directory where krypton3 is stored. The binary is called encrypt, so this binary would have used to encypt the content of krypton3.
+    - The binary uses keyfile which is available in the directory where it is used and encrypts the file
+- The following steps can used for getting the password:
+    1. Create and shift the operation to temporary directory
+    ```
+    cd $(mktemp -d)
+    ```
+    2. Create a link to the keyfile which is stored in the directory where krypton3 is stored.
+    ```
+    ln -s <file>
+    ```
+    So that binary could access the keyfile which is used for encrypting krypton3 
+    3. change the permissions of the file using ```chmod```
+    ```
+    chmod 777 .
+    ```
+    4. Execute the binary along with file containing the following ```abcdefg```
+    ```
+    ./<binary-name> <file>
+    ```
+    5. A new file would be created in the directory with name ```ciphertext``` and analyse the pattern of the text in the file ```ciphertext```. After analysis create the pattern sets <set-1> <set-2>
+    ```
+    cat ciphertext | tr <set-1> <set-2> 
+    ```
+    
