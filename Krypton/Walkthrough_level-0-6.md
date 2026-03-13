@@ -80,7 +80,7 @@ for i in {A..Z}; do cat found*|tr -cd $i| wc -c| tr -d "\n"; printf " $i \n"; do
 ```
 - Arrange the result of the above command in a single line format for example ```THYFJSIMAPQWERY...``` 
 - Use google or chatgpt to find the list of alphabets that occur most till the one which occur least. for example it would be like ```ETAOINSHRDLUCMWYFGPBVKJXQ```
-- Use ```cat`` and ```tr``` command to replace the letters of the file, i.e
+- Use ```cat``` and ```tr``` command to replace the letters of the file, i.e
 ```
 cat <file-name> | tr <result-set> <occurence-set>
 ```
