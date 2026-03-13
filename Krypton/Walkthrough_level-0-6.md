@@ -34,7 +34,6 @@ cat <file-location> | tr <first-set> <second-set>
 ## Level 2
 
 - Password for the next level is in the file krypton3 which is encrypted using caesar cipher. One feature about ceasar cipher is the number of the characters to shift can vary.
-- It is also mentioned the characters changes the case, ie lowercase is converted to uppercase
 - There are additional information provided which describes how the file has been encrypted, ie
     - A binary is available in the directory which is stored in the same directory where krypton3 is stored. The binary is called encrypt, so this binary would have used to encypt the content of krypton3.
     - The binary uses keyfile which is available in the directory where it is used and encrypts the file
@@ -59,4 +58,31 @@ cat <file-location> | tr <first-set> <second-set>
     ```
     cat ciphertext | tr <set-1> <set-2> 
     ```
-## Level 3     
+## Level 3   
+
+- Password is found in file called krypton4, The directory also contains 6 more files called found1, found2, found3 along with files HINT1, HINT2 and README
+- The password is encypted using a substitution cipher but this time the mechanism used is not given. To find the mechanism used, analyse the file found1, found2 and found3 since it is also encrypted using the same method.
+- Upon opening the files HINT1 and HINT2, we get the following hints
+```
+Some letters are more prevalent in English than others.
+"Frequency Analysis" is your friend.
+```
+
+- The first hint points out that some letters in the english alphabets are occuring more than others. Basically it means to find the alphabet in the cipher texts that occur the most and replace it with the alphabet which is used most in english. 
+- Use google to learn more on frequency analysis and understand the concept 
+- First, the number of occurence of each character should be calculated, i.e using the follwing
+```
+for i in {A..Z}; do cat found*|tr -cd $i| wc -c| tr -d "\n"; printf " $i \n"; done | sort -nr
+```
+- The result for the above command would be
+```
+<Number of occurence> <Alphabet> 
+```
+- Arrange the result of the above command in a single line format for example ```THYFJSIMAPQWERY...``` 
+- Use google or chatgpt to find the list of alphabets that occur most till the one which occur least. for example it would be like ```ETAOINSHRDLUCMWYFGPBVKJXQ```
+- Use ```cat`` and ```tr``` command to replace the letters of the file, i.e
+```
+cat <file-name> | tr <result-set> <occurence-set>
+```
+- Change the occurence-set until and unless a clear message appears.
+
