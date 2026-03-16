@@ -86,3 +86,69 @@ cat <file-name> | tr <result-set> <occurence-set>
 ```
 - Change the occurence-set until and unless a clear message appears.
 
+## Level 4
+
+- Password is stored in the file krypton5, the content of the file is encrypted using Vignère Cipher. It is encrypted using a 6 letter key. The other files in the directory of krypton5 is HINT, found1 and found2 along with a README file describing the level.
+```
+Good job!
+
+You more than likely used frequency analysis and some common sense
+to solve that one.
+
+So far we have worked with simple substitution ciphers.  They have
+also been 'monoalphabetic', meaning using a fixed key, and
+giving a one to one mapping of plaintext (P) to ciphertext (C).
+Another type of substitution cipher is referred to as 'polyalphabetic',
+where one character of P may map to many, or all, possible ciphertext
+characters.
+
+An example of a polyalphabetic cipher is called a Vigen�re Cipher.  It works
+like this:
+
+If we use the key(K)  'GOLD', and P = PROCEED MEETING AS AGREED, then "add"
+P to K, we get C.  When adding, if we exceed 25, then we roll to 0 (modulo 26).
+
+
+P     P R O C E   E D M E E   T I N G A   S A G R E   E D
+K     G O L D G   O L D G O   L D G O L   D G O L D   G O
+
+becomes:
+
+P     15 17 14 2  4  4  3 12  4 4  19  8 13 6  0  18 0  6 17 4 4   3
+K     6  14 11 3  6 14 11  3  6 14 11  3  6 14 11  3 6 14 11 3 6  14
+C     21 5  25 5 10 18 14 15 10 18  4 11 19 20 11 21 6 20  2 8 10 17
+
+So, we get a ciphertext of:
+
+VFZFK SOPKS ELTUL VGUCH KR
+
+This level is a Vigen�re Cipher.  You have intercepted two longer, english
+language messages.  You also have a key piece of information.  You know the
+key length!
+
+For this exercise, the key length is 6.  The password to level five is in the usual
+place, encrypted with the 6 letter key.
+
+Have fun!
+```
+- This level can be solved using two methods and both does not include the terminal.One method using the website DeCode.fr and Other is using some simple calculations.
+- Even though we are using the website, some additonal information can narrow the search. Start by opening both the found files. Notice that both the file starts with YYI which could mean THE.- Keeping that in mind calculate the KEY 
+```
+YYI     24 24 8 (Cipher)
+THE     19  7 4 (Plain)
+
+FRE      5 17 4 (Key)
+```
+- Using this information, go to DeCode.fr and paste the content of found1. Use the ```Knowing only a partial key (joker=?):``` and enter the Key and decrypt.
+- After that use second option ```Knowing the key-length/size, number of letters:``` and press decrypt. Different number of keys would be used of the size 6. 
+- With all the different types of keys, replace the content of found1 with krypton5 and use the option ```Knowing the Key/Password:``` and try those different keys until a proper text is formed
+
+- Second mehod would be to use the key and ciphertext directly to get the palintext.
+```
+HCIKV RJOX (Cipher)  
+FRE.. .FRE (Key)
+
+CLE.. .EXT (Plain)
+```
+- using chatgpt or any online tool, find the suitable missing letters
+
