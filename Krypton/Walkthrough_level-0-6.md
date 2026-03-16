@@ -132,6 +132,8 @@ place, encrypted with the 6 letter key.
 Have fun!
 ```
 - This level can be solved using two methods and both does not include the terminal.One method using the website DeCode.fr and Other is using some simple calculations.
+
+### First Method
 - Even though we are using the website, some additonal information can narrow the search. Start by opening both the found files. Notice that both the file starts with YYI which could mean THE.- Keeping that in mind calculate the KEY 
 ```
 YYI     24 24 8 (Cipher)
@@ -143,7 +145,8 @@ FRE      5 17 4 (Key)
 - After that use second option ```Knowing the key-length/size, number of letters:``` and press decrypt. Different number of keys would be used of the size 6. 
 - With all the different types of keys, replace the content of found1 with krypton5 and use the option ```Knowing the Key/Password:``` and try those different keys until a proper text is formed
 
-- Second mehod would be to use the key and ciphertext directly to get the palintext.
+### Second method 
+- To use the key and ciphertext directly to get the palintext.
 ```
 HCIKV RJOX (Cipher)  
 FRE.. .FRE (Key)
