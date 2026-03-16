@@ -134,7 +134,8 @@ Have fun!
 - This level can be solved using two methods and both does not include the terminal.One method using the website DeCode.fr and Other is using some simple calculations.
 
 ### First Method
-- Even though we are using the website, some additonal information can narrow the search. Start by opening both the found files. Notice that both the file starts with YYI which could mean THE.- Keeping that in mind calculate the KEY 
+- Even though we are using the website, some additonal information can narrow the search. Start by opening both the found files. Notice that both the file starts with YYI which could mean THE.
+- Keeping that in mind calculate the KEY 
 ```
 YYI     24 24 8 (Cipher)
 THE     19  7 4 (Plain)
