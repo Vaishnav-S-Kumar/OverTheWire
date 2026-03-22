@@ -156,3 +156,18 @@ CLE.. .EXT (Plain)
 ```
 - using chatgpt or any online tool, find the suitable missing letters
 
+## Level 5
+
+- The description of the challenge is 
+```
+Frequency Analysia can break a known key length as well. Lets try one last polyalphabetic cipher, but this time the key length is unknown. Note: the text is writen in American English 
+```
+- Password for the next level is encrypted in the file krypton6
+- Use DeCode.fr and paste the content of found1 and change language to english. Use the automatic decipher option.
+- The result provides the key for the algorithm, use the key and paste content of the krypton6 file.
+Use the decipher option this time. 
+- The result is the password for the next level
+
+ 
+
+
